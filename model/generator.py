@@ -9,11 +9,11 @@ class Generator(nn.Module):
         self.ngpu = ngpu
 
         self.main = nn.Sequential(
-            self._block(z_dim, ngf * 8, 4, 1, 0, bias=False),
-            self._block(ngf * 8, ngf * 4, 4, 2, 1, bias=False),
-            self._block(ngf * 4, ngf * 2, 4, 2, 1, bias=False),
-            self._block(ngf * 2, ngf * 4, 4, 2, 1, bias=False),
-            nn.ConvTranspose2d(ngf, in_channels, 4, 2, 1, bias=False),
+            self._block(z_dim, ngf * 8, 4, 1, 0),
+            self._block(ngf * 8, ngf * 4, 4, 2, 1),
+            self._block(ngf * 4, ngf * 2, 4, 2, 1),
+            self._block(ngf * 2, ngf * 4, 4, 2, 1),
+            nn.ConvTranspose2d(ngf, in_channels, 4, 2, 1),
             nn.Tanh(),
         )
 
