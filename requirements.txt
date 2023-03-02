@@ -1,0 +1,21 @@
+numpy
+
+matplotlib
+
+pandas
+
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch 
+torchvision 
+
+botorch
+
+scipy
+
+tqdm
+
+numpy
+
+Pillow
+
+scikit_learn
